@@ -1,13 +1,13 @@
 // botão de pesquisar
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa")
-    let makeup = document.getElementById("makeup-pesquisa")
     let campoPesquisa = document.getElementById("campo-pesquisa").value
     console.log(campoPesquisa)
+
     campoPesquisa = campoPesquisa.toLowerCase()
 
     if(!campoPesquisa){
-        section.innerHTML = "<p> Digite algo para pesquisar</p>"
+        section.innerHTML = "<h2> Digite algo para pesquisar!</h2>"
         return
     }
 
@@ -26,16 +26,16 @@ function pesquisar() {
                 <h2>${dado.titulo}</h2>
                 <p class="descrição-meta"> ${dado.descricao}</p>
                 <section class="resultados-pesquisados">
-                <button>ver mais</button>
+                <button><a href=${dado.link}>ver mais</a></button>
             </div>
-        `
+        ` 
         }
-        if (!resultados){
-            resultados = "<p> nada foi encontrado :( </p>"
+        section.innerHTML =  "<h2>Resultado(s) da sua pesquisa!</h2>" + resultados
+        if(!resultados){
+            section.innerHTML = "<h2>Nada foi encontrado :( </h2>"
         }
-        section.innerHTML = resultados 
     }
-    
+
 }
 
 

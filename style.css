@@ -1,8 +1,22 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Estiliza o corpo da página */
-.barra-pesquisa, .produto-promocao{
+/* Estiliza o campo em que aparece os resultados da pesquisa */
+.barra-pesquisa{
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: #FFF0F5; /* Cor de fundo da página */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    
+}
+
+/* Estiliza o box com o produto em promoção */
+.produto-promocao{
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
     background-color: #FFF0F5; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
@@ -14,6 +28,18 @@
     padding: 0; /* Remove o padding padrão */
 }
 
+/* Estiliza o texto de apresentação da página */
+.cabecalho{
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-color: #FFF0F5; /* Cor de fundo da página */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+ 
+}
+
+
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
@@ -24,10 +50,10 @@ h1 {
 
 /* Estiliza as seções da página */
 section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
+    display:flex; /* Usa Flexbox para layout */
+    flex-direction:column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    margin-bottom: 1rem; /* Espaçamento abaixo de cada seção */
 }
 
 /* Estiliza os inputs dentro das seções */
@@ -57,6 +83,7 @@ section button {
 section button:hover {
     background-color: #722F37; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
@@ -67,7 +94,13 @@ section button:hover {
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    
 }
+.resultados-pesquisados button a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 
 /* Estiliza cada item de resultado */
 .item-resultado {
@@ -85,6 +118,7 @@ section button:hover {
     text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Estiliza os paragrafos dentro dos itens de resultado */
 .item-resultado p {
     color: #45474B; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
@@ -95,8 +129,9 @@ section button:hover {
 .item-resultado img {
     width: 400px;
     height: 400px;
-    margin: 10px;
+    margin: 0 auto;
     align-items: center;
+    display: block;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
@@ -118,7 +153,7 @@ footer {
     font-size: 1rem; /* Tamanho da fonte */
 }
 
-/*navbar*/
+/* estiliza o navbar */
 nav {
     background-color: #F5F7F8;
     overflow: hidden;
@@ -157,6 +192,8 @@ nav {
     text-decoration: none;
 }
 
+/* estila a barra de pesquisa */
+
 .pesquisa {
     position: relative;
     display: flex; /* Usa Flexbox para layout */
@@ -189,18 +226,18 @@ nav {
     width: 40%;
     height: inherit;
 }
-.pesquisa button:hover {
+.pesquisa button:hover, .product button {
     background-color: #722F37; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
-/*produto em promoção*/
+/* estilzando o produto em promoção*/
 
   .product-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF; /* Cor de fundo da seção */
+    background-color: #FFFFFF; 
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -246,9 +283,16 @@ nav {
   
   }
 
- /* maquiagens, skin care e fragrancias*/
+  .product-info button a {
+    color: #fff;
+    text-decoration: none;
+  
+  }
+
+ /* estiliza maquiagens, skin care e fragrancias*/
 
  .maquiagens,.skincare1,.fragrancias1, .ofertas{
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
     color:#5e2129;
     margin-bottom: 2rem;
  }
@@ -274,6 +318,7 @@ nav {
   height: 350px;
   margin: 0 auto;
   align-items: center;
+  display: flex;
 }
 
 .rating {
@@ -285,11 +330,10 @@ nav {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
+  text-decoration: none;
 }
   
-  /* Outros estilos para personalizar a aparência */
-
-
+/* Outros estilos para personalizar a aparência */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem; /* Tamanho da fonte em telas menores */
@@ -310,24 +354,7 @@ nav {
         font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
     }
 }
-.carousel {
-    width: 400px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel ul {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel li {
-    flex: 0 0 100%;
-  }
-  .carousel img {
-    width: 400px;
-    height: 400px;
-  }
+
 /* Responsividade para celulares */
 @media (max-width: 480px) {
 
