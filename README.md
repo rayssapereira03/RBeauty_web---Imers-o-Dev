@@ -1,4 +1,4 @@
-# RBeauty_web---Imers-o-Dev
+# R Beauty
 Desenvolvimento de página web com html, css e javascript durante a imersão dev da Alura + Google Gemini
 ##  Imersão Dev Alura com Google Gemini: Minha Jornada HTML, CSS e JavaScript!
 
